@@ -270,7 +270,7 @@ describe('#display()', () => {
       },
     };
 
-    awsInfo.gatheredData.info.cloudFront = 'a12bcdef3g45hi.cloudfront.net';
+    awsInfo.gatheredData.info.cloudFront = ['a12bcdef3g45hi.cloudfront.net'];
 
     let expectedMessage = '';
 

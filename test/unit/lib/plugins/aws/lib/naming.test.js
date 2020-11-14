@@ -921,14 +921,20 @@ describe('#naming()', () => {
 
   describe('#getCloudFrontDistributionLogicalId()', () => {
     it('should return CloudFront distribution logical id', () => {
-      expect(sdk.naming.getCloudFrontDistributionLogicalId()).to.equal('CloudFrontDistribution');
+      expect(sdk.naming.getCloudFrontDistributionLogicalId({})).to.equal('CloudFrontDistribution');
+      expect(sdk.naming.getCloudFrontDistributionLogicalId({ name: 'Hello' })).to.equal(
+        'CloudFrontDistributionHello'
+      );
     });
   });
 
   describe('#getCloudFrontDistributionDomainNameLogicalId()', () => {
     it('should return CloudFront distribution domain name logical id', () => {
-      expect(sdk.naming.getCloudFrontDistributionDomainNameLogicalId()).to.equal(
+      expect(sdk.naming.getCloudFrontDistributionDomainNameLogicalId({})).to.equal(
         'CloudFrontDistributionDomainName'
+      );
+      expect(sdk.naming.getCloudFrontDistributionDomainNameLogicalId({ name: 'Hello' })).to.equal(
+        'CloudFrontDistributionDomainNameHello'
       );
     });
   });
