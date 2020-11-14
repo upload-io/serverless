@@ -6,3 +6,7 @@
 npm-debug.log
 /package-lock.json
 !/lib/plugins/create/templates/**/.gitignore
+
+# IntelliJ
+.idea/
+*.iml
